@@ -1,0 +1,20 @@
+.top-bar{
+  background-color: lightblue;
+  padding: 10px;
+  margin-top:5px;
+  border-radius: 5px;
+}
+.contents
+{
+  /*background-color: lightseagreen;*/
+  padding: 10px;
+  margin-top:5px;
+  border-radius: 5px;
+  height: 80%;
+}
+
+/*-----------------------------------------------------------*/
+.modal-custom
+{
+  height: 400px;
+}

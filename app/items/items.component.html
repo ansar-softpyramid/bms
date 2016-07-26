@@ -1,0 +1,45 @@
+<div class="col-md-12">
+    <!--<div class="row">
+        <item-detail (close)="formClosed($event)"></item-detail>
+    </div>-->
+    <div class="col-md-6" style="background-color: whitesmoke; padding: 10px;">
+        <div class="row" style="margin-bottom:5px;">
+            <div class="col-md-6">
+                <h3>All Items</h3>
+            </div>
+            <div class="col-md-6">
+                <button type="button" class="btn btn-md btn-primary pull-right" (click)="createItem()" style="margin-top: 15px;">Create new Item</button>
+            </div>
+        </div>
+        <hr style="padding: 0px;">
+        <table class="table table-condensed table-striped">
+            <thead>
+                <tr>
+                    <th>S No</th>
+                    <th>Part No</th>
+                    <th>Name</th>
+                    <th>Unit</th>
+                    <th>Price</th>
+                    <th>GST</th>
+                    <th colspan="2">Options</th>
+                <tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let item of items; let i=index">
+                    <td>{{ getSNo(i) }}</td>
+                    <td>{{ item.part_no}}</td>
+                    <td>{{ item.name }}</td>
+                    <td>{{ item.unit }}</td>
+                    <td>{{ item.price }}</td>
+                    <td>{{ item.gst }}</td>
+                    <td>
+                        <a (click)="gotoDetail(item)" href="javascript:void(0);">Edit</a>    
+                    </td>
+                    <td>
+                        <a (click)="deleteItem(item)" href="javascript:void(0);">Delete</a>    
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

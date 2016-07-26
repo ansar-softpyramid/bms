@@ -1,0 +1,11 @@
+<h3>Top Items List</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let item of items" (click)="gotoDetail(item)" class="col-1-4">
+    <div class="module hero">
+      <h4>{{item.name}}</h4>
+    </div>
+  </div>
+</div>
+<div class="col-md-12">
+<p amHighlight [highlightcolor]="'yellow'" [defaultcolor]="'cyan'">This is text for highlighting.</p>
+</div>

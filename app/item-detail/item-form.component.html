@@ -1,0 +1,58 @@
+
+<div class="col-md-6" style="background-color: whitesmoke; padding: 10px;">
+    <div>
+        <h3 style="display: inline-block; padding-top: 5px; width: 600px;">{{title}}</h3>
+        <a class="btn btn-sm btn-default" (click)="goBack();" ><</a>
+    </div>
+    <hr style="padding-bottom: 0px; padding-top: 0px;">
+    <form class="form-horizontal">
+        <input type="hidden" [value]="item.id" name=id>
+        <div class="form-group">
+            <label for="name" class="col-md-4 control-label">Part Number</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="part_no" [(ngModel)]="item.part_no" placeholder="Part number of Item">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-4 control-label">Name</label>
+            <div class="col-md-8">
+                <input type="text" class="form-control" name="name" [(ngModel)]="item.name" required placeholder="Name of Item">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-4 control-label">Unit of Issue</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="unit" [(ngModel)]="item.unit" required placeholder="Unit of Issue">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-4 control-label">Price</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="price" [(ngModel)]="item.price" required placeholder="Price">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="name" class="col-md-4 control-label">GST</label>
+            <div class="col-md-4">
+                <input type="text" class="form-control" name="gst" [(ngModel)]="item.gst" required placeholder="GST % if apply">
+            </div>
+        </div>
+    </form>
+        <hr>
+    <!--<div class="row"><hr></div>-->
+    <div class="row">
+        <div class="col-md-4"></div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-md btn-default" (click)="saveItem(item)" [disabled]="item.id!==null">Save</button>
+        </div>
+        <div class="col-md-2">
+            <button type="button" class="btn btn-md btn-primary" (click)="updateItem(item)"  [disabled]="item.id===null">Update</button>
+        </div>
+        <div class="col-md-3">
+            <button type="button" class="btn btn-md btn-danger pull-right" (click)="deleteItem(item)" [disabled]="item.id===null">Delete</button>
+        </div>
+    </div>
+</div>
+
+
+        

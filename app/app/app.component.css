@@ -1,0 +1,40 @@
+.menu-bar
+{
+    background-color: darkblue;
+    border-top: 2 solid #039be5;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 10px;
+}
+h1.app-title {
+    font-family: sans-serif;
+    font-weight: bolder;
+    color: black;
+    margin-bottom: 0;
+    text-transform: uppercase;
+}
+h2 {
+    font-size: 2em;
+    margin-top: 0;
+    padding-top: 0;
+}
+nav a {
+    padding: 5px 10px;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+    background-color: #eee;
+    /*border-radius: 4px;*/
+    width: 100px;
+    text-align: center;
+}
+nav a:visited, a:link {
+    color: #607D8B;
+}
+nav a:hover {
+    color: #039be5;
+    background-color: #CFD8DC;
+}
+nav a.router-link-active {
+    color: #039be5;
+}
